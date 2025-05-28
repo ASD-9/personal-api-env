@@ -7,10 +7,10 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.pf-backend.rule=Host(`personal-api.asd9.fun`)"
-      - "traefik.http.routers.pf-backend.entrypoints=websecure"
-      - "traefik.http.routers.pf-backend.tls.certresolver=letsencrypt"
-      - "traefik.http.services.pf-backend.loadbalancer.server.port=3000"
+      - "traefik.http.routers.personal-api.rule=Host(`personal-api.asd9.fun`)"
+      - "traefik.http.routers.personal-api.entrypoints=websecure"
+      - "traefik.http.routers.personal-api.tls.certresolver=letsencrypt"
+      - "traefik.http.services.personal-api.loadbalancer.server.port=3000"
     networks:
       - traefik_network
 
