@@ -8,7 +8,6 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.personal-api.rule=Host(`personal-api.asd9.fun`)"
-      - "traefik.http.routers.personal-api.entrypoints=websecure"
       - "traefik.http.routers.personal-api.tls.certresolver=letsencrypt"
       - "traefik.http.services.personal-api.loadbalancer.server.port=3000"
     networks:
